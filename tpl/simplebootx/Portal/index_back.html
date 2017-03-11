@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="de-DE">
+	<title>{$site_name}</title>
+    <meta name="author" content="Powerless"> 
+    <meta name="Copyright" content="{$site_seo_title}">
+	<meta name="keywords" content="{$site_seo_keywords}" />
+	<meta name="description" content="{$site_seo_description}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="__TMPL__Public/style/main.css"/>
+	<link rel="icon" href="__TMPL__Public/images/ico.ico" type="image/ico">
+</head>
+
+<body>
+    <div id="header">
+    	<div id="topnav">
+            	<a href="http://sc.ibtv.cc" title="简">中文(简)</a>┊
+        		<a href="http://tc.ibtv.cc" title="繁">中文(繁)┊
+                <a href="http://en.ibtv.cc" title="English">English</a>┊
+                <a href="http://ar.ibtv.cc" title="العربية">العربية</a>┊
+                <a href="http://fr.ibtv.cc" title="français">français</a>┊
+                <a href="http://es.ibtv.cc" title="español">español</a>┊
+                <a href="http://ru.ibtv.cc" title="русский">русский</a>┊
+                <a href="http://pt.ibtv.cc" title="português">português</a>┊
+                <a href="http://de.ibtv.cc" title="Deutsch">Deutsch</a>┊
+            	<a href="http://kr.ibtv.cc" title="한국어">한국어</a>
+            	<span><a href="{:u('list/index',array('id'=>300))}">Contact us</a></span>
+        </div>
+        <div id="header_main">
+        	<div id="logo">
+            	<a href="__ROOT__/" title="LOGO">
+            		<img  onerror="nofind();" src="__TMPL__Public/images/logo2.png"/>
+                </a>
+            </div>
+            <div id="search">
+            <form role="form" method="post" action="{:u('/Search')}">           
+            	<input type="text" class="searchInput" name="keyword" required="required"/>
+                <input type="submit" class="searchbar" value="검색" />
+            </form>
+            </div>
+        </div>
+        <!-- nav -->
+        
+        <div class="nav">
+          <a href="{:u('list/index',array('id'=>110))}" title="뉴스">뉴스</a> | 
+          <a href="{:u('list/index',array('id'=>120))}" title="경제">경제</a> | 
+          <a href="{:u('list/index',array('id'=>130))}" title="문화">문화</a> | 
+          <a href="{:u('list/index',array('id'=>140))}" title="여행">관광</a> | 
+          <a href="{:u('list/index',array('id'=>150))}" title="라이프">라이프</a> | 
+          <a href="{:u('list/index',array('id'=>160))}" title="국제 무역">국제 무역</a> | 
+          <a href="{:u('list/index',array('id'=>170))}" title="글로벌 산업 기선">글로벌 비즈니스 기선</a> | 
+          <a href="{:u('list/index',array('id'=>180))}" title="고위급 인터뷰">고위급 인터뷰</a> | 
+          <a href="{:u('list/index',array('id'=>190))}" title="투자">투자</a> | 
+          <a href="/shop" title="회원 몰">회원 몰</a>
+        </div>
+        <!-- //nav -->
+    </div>
+    <div id="wrap">
+    	<div style="margin:0 auto; text-align:center">
+				<a href="#"><img src="__TMPL__Public/images/1.jpg" /></a>
+				<a href="#"><img src="__TMPL__Public/images/2.jpg" /></a>
+				<a href="#"><img src="__TMPL__Public/images/3.jpg" /></a>
+				<a href="#"><img src="__TMPL__Public/images/4.jpg" /></a>
+				<a href="#"><img src="__TMPL__Public/images/5.jpg" /></a>
+				<a href="#"><img src="__TMPL__Public/images/6.jpg" /></a>
+        </div>
+    </div>
+        <div id="footer">
+    	<div class="foot">
+        	<div class="sidebar_left">
+            	<div class="list_6">
+                <a>ICP message：</a>
+                <a href="http://www.miitbeian.gov.cn" target="_blank">{$site_icp}</a>
+                </div>
+                <div class="list_6" style="text-align:center;">
+                <a>Copyright © 2014</a>
+                <a href="http://www.ibtv.cc/" target="_blank">International Business Television</a>
+                <a>by</a>
+                <a href="http://t.qq.com/wzxaini9" target="_blank">"Powerless"</a>
+                </div>
+            </div>
+            <div class="sidebar_right">
+	        		<a href="http://info.flagcounter.com/s31P" target="_blank">
+                    <img  onerror="nofind();" src="http://s11.flagcounter.com/count/s31P/bg_14445B/txt_FFFFFF/border_FFFFFF/columns_3/maxflags_15/viewers_3/labels_1/pageviews_1/flags_2/" alt="Flag Counter" border="0">
+                    </a>
+            </div>
+        </div>
+    </div>
+      <div id="backtotop"><i class="fa fa-arrow-circle-up"></i></div>
+      {$site_tongji}
+</body>
+</html>
+
+
+
+
+

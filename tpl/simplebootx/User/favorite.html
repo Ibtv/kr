@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+<meta name="author" content="ThinkCMF">
+<tc_include file="Public:head" />
+</head>
+
+<body class="body-white" id="top">
+	<tc_include file="Public:nav" />
+
+		<div class="container tc-main">
+                <div class="row">
+                    <div class="span3">
+	                    <tc_include file="Public:usernav"/>
+                    </div>
+                    <div class="span9">
+                           <div class="tabs">
+                               <ul class="nav nav-tabs">
+                                   <li class="active"><a href="#one" data-toggle="tab"><i class="fa fa-star"></i> 내 모음집</a></li>
+                               </ul>
+                               <div class="tab-content">
+                                   <div class="tab-pane active" id="one">
+                                   		<table class="table table-bordered table-striped table-hover">
+									    <thead>
+									      <tr>
+									        <th>#</th>
+									        <th>제목</th>
+									        <th>설명</th>
+									        <th>조작</th>
+									      </tr>
+									    </thead>
+									    <tbody>
+									    <foreach name="favorites" item="vo">
+									      <tr>
+									        <td>{$vo.id}</td>
+									        <td>{$vo.title}</td>
+									        <td>{$vo.description}</td>
+									        <td><a href="{$vo.url}">보기</a> | <a class="J_ajax_dialog_btn" href="{:u('user/favorite/delete_favorite',array('id'=>$vo['id']))}" data-msg="취소 모음집 삭제하시겠습니까?" data-ok="" data-cacel="취소">취소 모음집</a></td>
+									      </tr>
+									    </foreach>
+									    </tbody>
+									  </table>
+                                   </div>
+                               </div>							
+                           </div>
+                    </div>
+                </div>
+
+		
+
+	</div>
+	<!-- /container -->
+<tc_include file="Public:footer" />
+	<tc_include file="Public:scripts" />
+</body>
+</html>

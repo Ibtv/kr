@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{$site_name}</title>
+<meta name="keywords" content="{$site_seo_keywords}" />
+<meta name="description" content="{$site_seo_description}">
+<meta name="author" content="ThinkCMF">
+<tc_include file="Public:head" />
+</head>
+<body class="body-white" id="top">
+	<tc_include file="Public:nav" />
+
+		<div class="container tc-main">
+                <div class="row">
+                    <div class="span3">
+	                    <tc_include file="Public:usernav"/>
+                    </div>
+                    <div class="span9">
+                           <div class="tabs">
+                               <ul class="nav nav-tabs">
+                                   <li class="active"><a href="#one" data-toggle="tab"><i class="fa fa-exchange"></i> 바인딩 계정</a></li>
+                               </ul>
+                               <div class="tab-content">
+                                   <div class="tab-pane active" id="one">
+	                                   <if condition="!empty($oauths['qq'])">
+	                                   		<button class="btn"><i class="fa fa-qq"></i> 이미 바인딩 腾讯QQ 계정</button>
+	                                   <else/>
+	                                   		<a class="btn btn-primary" href="{:U('api/oauth/bang',array('type'=>'qq'))}"><i class="fa fa-qq"></i> 바인딩 腾讯QQ 계정</a>
+	                                   </if>
+	                                   <if condition="!empty($oauths['sina'])">
+	                                   		<button class="btn"><i class="fa fa-weibo"></i> 이미 바인딩 신랑 마이크로 블 로그 계정</button>
+	                                   <else/>
+	                                   		<a class="btn btn-primary" href="{:U('api/oauth/bang',array('type'=>'sina'))}"><i class="fa fa-weibo"></i> 바인딩 신랑 마이크로 블 로그 계정</a>
+	                                   </if>
+                                   </div>
+                               </div>							
+                           </div>
+                    </div>
+                </div>
+
+		
+
+	</div>
+	<!-- /container -->
+<tc_include file="Public:footer" />
+	<tc_include file="Public:scripts" />
+</body>
+</html>
